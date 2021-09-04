@@ -40,6 +40,10 @@ dependencies {
     runtimeOnly 'com.h2database:h2:1.4.200'
     runtimeOnly 'mysql:mysql-connector-java:8.0.26'
     testImplementation 'org.springframework.boot:spring-boot-starter-test:2.5.4'
+
+    implementation group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.1'
+
+
 }
 
 group = 'org.springframework.samples'
@@ -47,13 +51,13 @@ version = '2.5.0-SNAPSHOT'
 description = 'petclinic'
 java.sourceCompatibility = JavaVersion.VERSION_1_8
 
-publishing {
-    publications {
-        maven(MavenPublication) {
-            from(components.java)
-        }
-    }
-}
+// publishing {
+//     publications {
+//         maven(MavenPublication) {
+//             from(components.java)
+//         }
+//     }
+// }
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
